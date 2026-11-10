@@ -1,0 +1,10 @@
+name: Verificacao de Seguranca
+
+on: [push]
+
+jobs:
+  print-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testando exibicao da Secret
+        run: echo "A minha chave secreta e ${{ secrets.CHAVE_MESTRA }}"
